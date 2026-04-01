@@ -1,44 +1,98 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(135deg, #4facfe, #00f2fe);
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    margin: 0;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
+    transition: 0.3s;
 }
 
-.container {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 10px 25px rgba( 0 , 0 , 0 , 0.2);
+/* Temas */
+body.light {
+    background: linear-gradient(135deg, #e3f2fd, #ffffff);
+    color: #000;
 }
 
+body.dark {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+}
+
+/* Layout */
+.app {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Card */
+.card {
+    margin-top: 20px;
+    padding: 25px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+
+/* Inputs */
 input {
-    padding: 10px;
-    margin: 10px 0;
-    width: 200px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
 }
 
+/* Botão */
 button {
-    padding: 10px 20px;
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 10px;
+    border: none;
     background: #4facfe;
     color: white;
-    border: none;
-    border-radius: 8px;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 button:hover {
+    transform: scale(1.05);
     background: #007bff;
 }
 
+/* Resultado */
 #resultado {
     margin-top: 20px;
+    line-height: 1.6;
     font-size: 18px;
-    font-weight: bold;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 0.3s;
+}
+
+#resultado.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 12px;
+    opacity: 0.7;
 }

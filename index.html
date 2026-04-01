@@ -1,22 +1,34 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator Pro</title>
     <link rel="stylesheet" href="style.css">
-    <title>Calculadora de idade</title>
 </head>
 <body>
-     <div class="container">
-        <h1>Calculadora de Idade</h1>
 
-        <label>Data de nascimento:</label>
+<div class="app">
+
+    <header>
+        <h1>🎂 Age Calculator</h1>
+        <button id="toggleTema">🌙</button>
+    </header>
+
+    <main class="card">
+        <label>Data de nascimento</label>
         <input type="date" id="dataNascimento">
 
-        <button onclick="calcularIdade()">Calcular</button>
+        <button id="btnCalcular">Calcular idade</button>
 
-        <p id="resultado"></p>
-     </div>
-    <script src="script.js"></script>
+        <div id="resultado"></div>
+    </main>
+
+    <footer>
+        <p>Projeto Front-End • JavaScript</p>
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
